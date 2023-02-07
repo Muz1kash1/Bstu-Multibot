@@ -19,7 +19,7 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
           cache: 'maven'
-      - name: Maven build
+      - name: Maven compile
         run: mvn clean build
       - name: All tests
         run: mvn test
