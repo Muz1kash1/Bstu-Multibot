@@ -19,5 +19,10 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
           cache: 'maven'
-      - name: Maven Package
-        run: mvn -B clean package -DskipTests
+      - name: Maven build
+        run: mvn clean build
+      - name: All tests
+        run: mvn test
+      - name: Package app
+        run: mvn package
+
