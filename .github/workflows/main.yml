@@ -19,8 +19,8 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
           cache: 'maven'
-      - name: Maven compile
-        run: mvn clean build
+      - name: Maven build
+        run: mvn clean compile
       - name: All tests
         run: mvn test
       - name: Package app

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7501b65e-606f-4f2a-9e5b-a6fc94f7cbdd" name="Changes" comment="feat: Добавил файл для ci гитхаба">
-      <change beforePath="$PROJECT_DIR$/.github/workflow/build.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7501b65e-606f-4f2a-9e5b-a6fc94f7cbdd" name="Changes" comment="feat: Добавил этапы для ci">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +173,7 @@
       <workItem from="1675691346375" duration="4382000" />
       <workItem from="1675718112081" duration="66000" />
       <workItem from="1675718181018" duration="11686000" />
-      <workItem from="1675794133245" duration="10617000" />
+      <workItem from="1675794133245" duration="10970000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Добавил нормальный гитигнор">
       <created>1675811016324</created>
@@ -190,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675811687611</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: Добавил этапы для ci">
+      <created>1675812651999</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675812651999</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +217,8 @@
     <MESSAGE value="feat: Инициационный комит" />
     <MESSAGE value="feat: Добавил нормальный гитигнор" />
     <MESSAGE value="feat: Добавил файл для ci гитхаба" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Добавил файл для ci гитхаба" />
+    <MESSAGE value="feat: Добавил этапы для ci" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Добавил этапы для ci" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
