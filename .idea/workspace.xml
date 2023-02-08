@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7501b65e-606f-4f2a-9e5b-a6fc94f7cbdd" name="Changes" comment="feat: Добавил этапы для ci">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+    <list default="true" id="7501b65e-606f-4f2a-9e5b-a6fc94f7cbdd" name="Changes" comment="fix: починил ошибку с названием build окончательно">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +62,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -77,7 +80,7 @@
       <recent name="ru.bstu.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.NodeApplication">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration name="YandexStagirovka" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.bstu.service.YandexStagirovka" />
       <module name="node" />
@@ -118,15 +121,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
         <settings>
-          <option name="services">
-            <list>
-              <option value="postgres" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
+          <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
@@ -145,19 +143,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
+      <item itemvalue="Application.YandexStagirovka" />
       <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
       <item itemvalue="Spring Boot.DispatcherApplication" />
       <item itemvalue="Spring Boot.NodeApplication" />
-      <item itemvalue="Application.YandexStagirovka" />
+      <item itemvalue="Docker.Dockerfile" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Spring Boot.NodeApplication" />
         <item itemvalue="Spring Boot.DispatcherApplication" />
         <item itemvalue="Application.YandexStagirovka" />
         <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +171,8 @@
       <workItem from="1675691346375" duration="4382000" />
       <workItem from="1675718112081" duration="66000" />
       <workItem from="1675718181018" duration="11686000" />
-      <workItem from="1675794133245" duration="10970000" />
+      <workItem from="1675794133245" duration="11288000" />
+      <workItem from="1675855385785" duration="4877000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Добавил нормальный гитигнор">
       <created>1675811016324</created>
@@ -196,7 +195,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675812651999</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: починил ошибку с названием build">
+      <created>1675812839375</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675812839375</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: починил ошибку с названием build окончательно">
+      <created>1675812920495</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675812920495</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +231,9 @@
     <MESSAGE value="feat: Добавил нормальный гитигнор" />
     <MESSAGE value="feat: Добавил файл для ci гитхаба" />
     <MESSAGE value="feat: Добавил этапы для ci" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Добавил этапы для ci" />
+    <MESSAGE value="fix: починил ошибку с названием build" />
+    <MESSAGE value="fix: починил ошибку с названием build окончательно" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: починил ошибку с названием build окончательно" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
