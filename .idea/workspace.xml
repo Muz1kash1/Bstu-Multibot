@@ -87,7 +87,7 @@
       <recent name="ru.bstu.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DispatcherApplication">
+  <component name="RunManager" selected="Spring Boot.NodeApplication">
     <configuration name="DispatcherApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Dispatcher" />
       <extension name="coverage">
