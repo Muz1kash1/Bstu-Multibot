@@ -6,10 +6,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.bstu.controller.UpdateController;
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Component
@@ -76,6 +81,78 @@ public class TelegramBot extends TelegramLongPollingBot {
   @SneakyThrows
   @Override
   public void onUpdateReceived(final Update update) {
-    updateController.processUpdate(update);
+//    updateController.processUpdate(update);
+    if (update.getMessage().getText().equals("Расписание \uD83D\uDDD3")) {
+      createCurriculumKeyboard(update);
+    } else {
+      updateController.processUpdate(update);
+      createStudentKeyboard(update);
+    }
+
+  }
+
+  private void createCurriculumKeyboard(final Update update) {
+    SendMessage sendMessage = new SendMessage();
+    sendMessage.enableMarkdown(true);
+
+    ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+    sendMessage.setReplyMarkup(replyKeyboardMarkup);
+    replyKeyboardMarkup.setSelective(true);
+    replyKeyboardMarkup.setResizeKeyboard(true);
+    replyKeyboardMarkup.setOneTimeKeyboard(true);
+
+    KeyboardRow keyboardButtonListFirstRow = new KeyboardRow();
+//    KeyboardRow keyboardButtonListSecondRow = new KeyboardRow();
+
+    keyboardButtonListFirstRow.add("Расписание на день");
+    keyboardButtonListFirstRow.add("Расписание на завтра");
+    keyboardButtonListFirstRow.add("Расписание на всю неделю");
+
+    List<KeyboardRow> keyboard = new ArrayList<>();
+    keyboard.add(keyboardButtonListFirstRow);
+//    keyboard.add(keyboardButtonListSecondRow);
+    replyKeyboardMarkup.setKeyboard(keyboard);
+
+    sendMessage.setChatId(update.getMessage().getChatId());
+    sendMessage.setReplyToMessageId(update.getMessage().getMessageId());
+    sendMessage.setText("""
+      1 - Расписание на день
+      2 - Расписание на завтра
+      3 - Расписание на эту неделю
+      """);
+//    execute(sendMessage);
+    updateController.setView(sendMessage);
+  }
+
+  public void createStudentKeyboard(Update update) throws TelegramApiException {
+    SendMessage sendMessage = new SendMessage();
+    sendMessage.enableMarkdown(true);
+
+    ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+    sendMessage.setReplyMarkup(replyKeyboardMarkup);
+    replyKeyboardMarkup.setSelective(true);
+    replyKeyboardMarkup.setResizeKeyboard(true);
+    replyKeyboardMarkup.setOneTimeKeyboard(true);
+
+    KeyboardRow keyboardButtonListFirstRow = new KeyboardRow();
+//    KeyboardRow keyboardButtonListSecondRow = new KeyboardRow();
+
+    keyboardButtonListFirstRow.add("Расписание \uD83D\uDDD3");
+    keyboardButtonListFirstRow.add("Не расписание ♿️");
+
+    List<KeyboardRow> keyboard = new ArrayList<>();
+    keyboard.add(keyboardButtonListFirstRow);
+//    keyboard.add(keyboardButtonListSecondRow);
+    replyKeyboardMarkup.setKeyboard(keyboard);
+
+    sendMessage.setChatId(update.getMessage().getChatId());
+    sendMessage.setReplyToMessageId(update.getMessage().getMessageId());
+    sendMessage.setText("""
+      1 - Расписание
+      2 - Не расписание
+      """);
+//    execute(sendMessage);
+    updateController.setView(sendMessage);
+
   }
 }

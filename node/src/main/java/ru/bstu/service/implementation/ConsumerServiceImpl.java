@@ -24,7 +24,7 @@ public class ConsumerServiceImpl implements ConsumerService {
   @RabbitListener(queues = TEXT_MESSAGE_UPDATE)
   public void consumeTextMessageUpdate(final Update update) {
     if (update != null) {
-      log.info("получено текстовое сообщение из ноды");
+      log.info("получено текстовое сообщение из ребита " + update.getMessage().getText());
 
       SendMessage sendMessage = new SendMessage();
       sendMessage.setChatId(update.getMessage().getChatId());

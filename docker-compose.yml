@@ -11,8 +11,8 @@ services:
       - '5672:5672'
       # HTTP management UI
       - '15672:15672'
-#    volumes:
-#      - "./rabbitmq:/var/lib/rabbitmq"
+    volumes:
+      - "./rabbitmq:/rabbitmq"
     restart: always
   postgres:
     image: 'postgres:14.4-alpine'
@@ -23,5 +23,6 @@ services:
       - 'POSTGRES_HOST_AUTH_METHOD=trust'
       - 'POSTGRES_DB=postgres'
       - 'POSTGRES_PASSWORD=postgres'
-#    volumes:
-#      - ./postgres/data/:/var/lib/postgresql/data
+    volumes:
+      - ./postgres/data/:/postgresql/data
+    restart: unless-stopped

@@ -20,10 +20,12 @@ public class UpdateController {
   private final MessageUtils messageUtils;
   private final UpdateProducer updateProducer;
 
+
   public UpdateController(final MessageUtils messageUtils, final UpdateProducer updateProducer) {
     this.messageUtils = messageUtils;
     this.updateProducer = updateProducer;
   }
+
 
   /**
    * Регистрация бота в контроллере
@@ -59,6 +61,7 @@ public class UpdateController {
   @SneakyThrows
   private void distributeMessagesByType(Update update) {
     if (update.getMessage().getText() != null) {
+//      setView(setInlineKeyboardMarkup(update));
       processTextMessage(update);
     } else if (update.getMessage().getAudio() != null) {
       processAudioMessage(update);
@@ -69,8 +72,6 @@ public class UpdateController {
     } else {
       setUnsupportedMessageTypeView(update);
     }
-
-
   }
 
   /**
