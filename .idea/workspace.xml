@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7501b65e-606f-4f2a-9e5b-a6fc94f7cbdd" name="Changes" comment="fix: добавил самохостящийся ранер">
+    <list default="true" id="7501b65e-606f-4f2a-9e5b-a6fc94f7cbdd" name="Changes" comment="feat: добавил клавиатуру с затычками для расписания">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dispatcher/src/main/java/ru/bstu/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dispatcher/src/main/java/ru/bstu/TelegramBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dispatcher/src/main/java/ru/bstu/controller/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dispatcher/src/main/java/ru/bstu/controller/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dispatcher/target/classes/ru/bstu/TelegramBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dispatcher/target/classes/ru/bstu/TelegramBot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dispatcher/target/classes/ru/bstu/controller/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dispatcher/target/classes/ru/bstu/controller/UpdateController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/bstu/service/implementation/ConsumerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/bstu/service/implementation/ConsumerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +81,7 @@
       <recent name="ru.bstu.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.NodeApplication">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration name="DispatcherApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Dispatcher" />
       <extension name="coverage">
@@ -145,18 +139,18 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.DispatcherApplication" />
-      <item itemvalue="Spring Boot.NodeApplication" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.runner: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Spring Boot.DispatcherApplication" />
+      <item itemvalue="Spring Boot.NodeApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Spring Boot.NodeApplication" />
         <item itemvalue="Spring Boot.DispatcherApplication" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml.runner: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -174,7 +168,8 @@
       <workItem from="1675718112081" duration="66000" />
       <workItem from="1675718181018" duration="11686000" />
       <workItem from="1675794133245" duration="11288000" />
-      <workItem from="1675855385785" duration="18587000" />
+      <workItem from="1675855385785" duration="19565000" />
+      <workItem from="1675938335243" duration="369000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Добавил нормальный гитигнор">
       <created>1675811016324</created>
@@ -225,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675861339456</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: добавил клавиатуру с затычками для расписания">
+      <created>1675892895560</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675892895560</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: добавил клавиатуру с затычками для расписания">
+      <created>1675893021980</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675893021980</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +259,8 @@
     <MESSAGE value="fix: починил ошибку с названием build" />
     <MESSAGE value="fix: починил ошибку с названием build окончательно" />
     <MESSAGE value="fix: добавил самохостящийся ранер" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: добавил самохостящийся ранер" />
+    <MESSAGE value="feat: добавил клавиатуру с затычками для расписания" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: добавил клавиатуру с затычками для расписания" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -40,7 +40,7 @@ RUN curl -o actions-runner-linux-x64-2.301.1.tar.gz -L https://github.com/action
 
 RUN tar xzf ./actions-runner-linux-x64-2.301.1.tar.gz
 
-RUN ./config.sh --url https://github.com/Muz1kash1/Virtual_School_Project --token ALD4DM5SEZZL4CLCZG7MIA3D4PMH6
+RUN ./config.sh --url https://github.com/Muz1kash1/Bstu-Multibot --token ALD4DM7L6MV2KYR3CCYOPHLD4QUUS
 
 CMD ["./run.sh"]
 
