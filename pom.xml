@@ -11,7 +11,7 @@
     <modules>
         <module>Dispatcher</module>
         <module>Rabbit</module>
-        <module>node</module>
+        <module>Curriculumprovider</module>
     </modules>
 
     <properties>
