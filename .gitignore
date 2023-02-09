@@ -38,3 +38,6 @@ rabbitmq/
 postgres/
 
 .DS_Store
+.iws
+workspace.xml
+tasks.xml
