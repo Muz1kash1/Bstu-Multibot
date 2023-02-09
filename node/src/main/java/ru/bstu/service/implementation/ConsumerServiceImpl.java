@@ -20,6 +20,10 @@ import static ru.bstu.commotrabbitmq.RabbitQueue.TEXT_MESSAGE_UPDATE;
 public class ConsumerServiceImpl implements ConsumerService {
   private final ProducerService producerService;
 
+  /**
+   * Принять обновление из очереди текстовых сообщений
+   * @param update обновление
+   */
   @Override
   @RabbitListener(queues = TEXT_MESSAGE_UPDATE)
   public void consumeTextMessageUpdate(final Update update) {
@@ -34,18 +38,30 @@ public class ConsumerServiceImpl implements ConsumerService {
 
   }
 
+  /**
+   * Принять обновление из очереди документов
+   * @param update обновление
+   */
   @Override
   @RabbitListener(queues = DOC_MESSAGE_UPDATE)
   public void consumeDocMessageUpdate(final Update update) {
     log.info("получено документальное сообщение из ноды");
   }
 
+  /**
+   * Принять обновление из очереди фотографий
+   * @param update обновление
+   */
   @Override
   @RabbitListener(queues = PHOTO_MESSAGE_UPDATE)
   public void consumePhotoMessageUpdate(final Update update) {
     log.info("получено фото сообщение из ноды");
   }
 
+  /**
+   * Принять обновление из очереди с аудиозаписями
+   * @param update обновление
+   */
   @Override
   @RabbitListener(queues = AUDIO_MESSAGE_UPDATE)
   public void consumeAudioMessageUpdate(final Update update) {

@@ -91,6 +91,10 @@ public class TelegramBot extends TelegramLongPollingBot {
 
   }
 
+  /**
+   * Создает клавиатуру для расписания
+   * @param update полученный апдейт
+   */
   private void createCurriculumKeyboard(final Update update) {
     SendMessage sendMessage = new SendMessage();
     sendMessage.enableMarkdown(true);
@@ -124,6 +128,11 @@ public class TelegramBot extends TelegramLongPollingBot {
     updateController.setView(sendMessage);
   }
 
+  /**
+   * Создает клавиатуру для меню действий студента
+   * @param update полученное обновление
+   * @throws TelegramApiException исключение телеграм апи
+   */
   public void createStudentKeyboard(Update update) throws TelegramApiException {
     SendMessage sendMessage = new SendMessage();
     sendMessage.enableMarkdown(true);

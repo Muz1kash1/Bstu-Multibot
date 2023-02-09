@@ -12,6 +12,10 @@ import ru.bstu.service.ProducerService;
 public class ProducerServiceImpl implements ProducerService {
   private final RabbitTemplate rabbitTemplate;
 
+  /**
+   * Метод посылающий ответ в очередь ответов для диспатчера
+   * @param sendMessage отправляемое сообщение
+   */
   @Override public void produceAnswer(SendMessage sendMessage) {
     rabbitTemplate.convertAndSend(RabbitQueue.ANSWER_MESSAGE_UPDATE, sendMessage);
   }
