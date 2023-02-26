@@ -69,7 +69,7 @@ public class UpdateController {
       processDocumentMessage(update);
     } else if (update.getMessage().getPhoto() != null) {
       processPhotoMessage(update);
-    } else {
+    } else{
       setUnsupportedMessageTypeView(update);
     }
   }
