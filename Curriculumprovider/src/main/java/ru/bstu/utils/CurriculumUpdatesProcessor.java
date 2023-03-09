@@ -5,13 +5,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.bstu.service.CurriculumApiClient;
 
+/** Обработчик запросов на расписание */
 @Slf4j
 @Service
 @AllArgsConstructor
 public class CurriculumUpdatesProcessor {
-  final CurriculumApiClient curriculumApiClient;
+  private final CurriculumToStringConverter curriculumToStringConverter;
 
   /**
    * Обрабатывает пришедшее обновление с требованием расписания
@@ -27,7 +27,9 @@ public class CurriculumUpdatesProcessor {
     if (update.getMessage().getText().equals("Расписание на день")) {
       sendMessage.setText(
           //          update.getMessage().getText() +
-          "типа строка с расписанием на седня от влада");
+          //"типа строка с расписанием на седня от влада"
+        curriculumToStringConverter.convertGroupCurriculumForToday("КБ-201")
+      );
     } else if (update.getMessage().getText().equals("Расписание на завтра")) {
       sendMessage.setText(
           //          update.getMessage().getText() +

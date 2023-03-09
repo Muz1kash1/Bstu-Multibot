@@ -7,16 +7,18 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import ru.bstu.commotrabbitmq.RabbitQueue;
 import ru.bstu.service.ProducerService;
 
-@AllArgsConstructor
 @Service
+@AllArgsConstructor
 public class ProducerServiceImpl implements ProducerService {
   private final RabbitTemplate rabbitTemplate;
 
   /**
    * Метод посылающий ответ в очередь ответов для диспатчера
+   *
    * @param sendMessage отправляемое сообщение
    */
-  @Override public void produceAnswer(SendMessage sendMessage) {
+  @Override
+  public void produceAnswer(SendMessage sendMessage) {
     rabbitTemplate.convertAndSend(RabbitQueue.ANSWER_MESSAGE_UPDATE, sendMessage);
   }
 }

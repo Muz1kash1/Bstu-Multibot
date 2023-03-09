@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM maven:3.8.6-openjdk-18-slim
 
 RUN apt-get -y update
 
@@ -20,10 +20,6 @@ ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 RUN apt-get install -y dotnet-sdk-6.0
 
-RUN apt install -y default-jdk
-
-RUN apt-get install -y maven
-
 RUN export JAVA_HOME=/usr/lib/jvm/default-java
 RUN export M2_HOME=/opt/maven
 RUN export MAVEN_HOME=/opt/maven
@@ -36,11 +32,11 @@ ENV RUNNER_ALLOW_RUNASROOT = 1
 
 RUN export RUNNER_ALLOW_RUNASROOT="1"
 
-RUN curl -o actions-runner-linux-x64-2.301.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.301.1/actions-runner-linux-x64-2.301.1.tar.gz
+RUN curl -o actions-runner-linux-x64-2.301.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.302.1/actions-runner-linux-x64-2.301.1.tar.gz
 
 RUN tar xzf ./actions-runner-linux-x64-2.301.1.tar.gz
 
-RUN ./config.sh --url https://github.com/Muz1kash1/Bstu-Multibot --token ALD4DM7L6MV2KYR3CCYOPHLD4QUUS
+RUN ./config.sh --url https://github.com/Muz1kash1/Bstu-Multibot --token ALD4DM3LMJ7WG3OZQYPTX2TD7N324
 
 CMD ["./run.sh"]
 

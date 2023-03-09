@@ -15,6 +15,7 @@ import static ru.bstu.commotrabbitmq.RabbitQueue.DOC_MESSAGE_UPDATE;
 import static ru.bstu.commotrabbitmq.RabbitQueue.PHOTO_MESSAGE_UPDATE;
 import static ru.bstu.commotrabbitmq.RabbitQueue.TEXT_MESSAGE_UPDATE;
 
+/** Сервис потребляющий сообщения из брокера сообщений */
 @Service
 @Slf4j
 @AllArgsConstructor
@@ -33,7 +34,6 @@ public class ConsumerServiceImpl implements ConsumerService {
   public void consumeTextMessageUpdate(final Update update) {
     producerService.produceAnswer(curriculumUpdatesProcessor.processCurriculumUpdate(update));
   }
-
 
   /**
    * Принять обновление из очереди документов
